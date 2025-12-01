@@ -1,0 +1,70 @@
+/* body *{
+    border: 1px solid black;
+} */
+
+body {
+    background-color: #e8e8e8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    border-bottom: 5px solid #0d6efd;
+}
+
+.header, .body {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #353535;
+    transition: color 0.3s;
+}
+.contact-link:hover {
+    color: #0d6efd;
+}
+
+
+/* ESTILOS ESPECÍFICOS PARA IMPRESIÓN */
+@media print {
+    /* 1. Fondo blanco y texto negro obligatorio */
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* 2. Eliminar sombras y márgenes externos para que parezca una hoja plana */
+    .header, .body {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 3. ¡EL TRUCO CLAVE! Forzar que la columna ocupe el 100% del ancho */
+    /* Bootstrap usa col-8 (66%), aquí lo forzamos a ser ancho completo */
+    .col-8 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    /* 4. Ocultar elementos que no quieres en el PDF (como botones de descarga) */
+    .no-print {
+        display: none !important;
+    }
+
+    /* 5. Forzar impresión de colores de fondo (para tu línea azul) */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* 6. Configuración de la hoja */
+    @page {
+        size: auto;
+    }
+}
