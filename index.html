@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaime Enrique Galindo Villegas — CV</title>
+  <style>
+    :root {
+      --ink: #171717;
+      --muted: #52616a;
+      --accent: #38788b;
+      --line: #dce5e8;
+      --paper: #fff;
+      --bg: #edf1f3
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 14px;
+      background: #ffffffed;
+      border-bottom: 1px solid #d8e0e3;
+      backdrop-filter: blur(8px)
+    }
+
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer
+    }
+
+    .primary {
+      background: #1f5364;
+      color: white
+    }
+
+    .secondary {
+      background: #e8eff1;
+      color: #193d48
+    }
+
+    button:hover {
+      filter: brightness(.96)
+    }
+
+    .sheet {
+      width: min(816px, calc(100% - 32px));
+      min-height: 1056px;
+      margin: 28px auto 40px;
+      padding: 55px 61px;
+      background: var(--paper);
+      box-shadow: 0 8px 30px #243a4518;
+      line-height: 1.34;
+      font-size: 13px
+    }
+
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 13px;
+      margin-bottom: 15px
+    }
+
+    h1 {
+      font-size: 25px;
+      letter-spacing: .35px;
+      margin: 0 0 6px;
+      line-height: 1.15
+    }
+
+    .contact {
+      color: #34474d;
+      font-size: 12.5px;
+      line-height: 1.65
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none
+    }
+
+    section {
+      margin: 0 0 15px
+    }
+
+    h2 {
+      font-size: 13px;
+      letter-spacing: .65px;
+      margin: 0 0 6px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line);
+      color: #202d32
+    }
+
+    p {
+      margin: 3px 0
+    }
+
+    .job,
+    .project {
+      margin: 7px 0 9px
+    }
+
+    .strong {
+      font-weight: 700
+    }
+
+    .meta {
+      color: #3e4d52
+    }
+
+    ul {
+      margin: 4px 0 0;
+      padding-left: 18px
+    }
+
+    li {
+      padding-left: 2px;
+      margin: 2px 0
+    }
+
+    .skills p {
+      margin: 3px 0
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding-top: 7px;
+      color: #68777b;
+      font-size: 10px;
+      margin-top: 12px
+    }
+
+    @media(max-width:650px) {
+      .sheet {
+        width: calc(100% - 16px);
+        min-height: 0;
+        margin: 12px auto;
+        padding: 28px 23px;
+        font-size: 12px
+      }
+
+      h1 {
+        font-size: 21px
+      }
+
+      .toolbar {
+        flex-wrap: wrap
+      }
+
+    }
+
+    @page {
+      size: letter portrait;
+      margin: 0
+    }
+
+    @media print {
+      body {
+        background: white
+      }
+
+      .toolbar {
+        display: none !important
+      }
+
+      .sheet {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 0;
+        padding: .53in .62in;
+        box-shadow: none;
+        font-size: 9.2pt;
+        line-height: 1.23
+      }
+
+      h1 {
+        font-size: 19pt
+      }
+
+      header {
+        padding-bottom: 9pt;
+        margin-bottom: 10pt
+      }
+
+      .contact {
+        font-size: 9pt
+      }
+
+      section {
+        margin-bottom: 9pt
+      }
+
+      h2 {
+        font-size: 9.5pt;
+        margin-bottom: 4pt
+      }
+
+      .job,
+      .project {
+        margin: 4pt 0 6pt
+      }
+
+      li {
+        margin: 1pt 0
+      }
+
+      footer {
+        display: none
+      }
+    }
+
+    .pdf-export {
+      width: 816px !important;
+      height: 1056px !important;
+      min-height: 1056px !important;
+      margin: 0 !important;
+      padding: 51px 59px !important;
+      box-shadow: none !important;
+      font-size: 11.6px !important;
+      line-height: 1.23 !important;
+      overflow: hidden !important;
+    }
+
+    .pdf-export h1 {
+      font-size: 24px !important;
+    }
+
+    .pdf-export .contact {
+      font-size: 12px !important;
+    }
+
+    .pdf-export section {
+      margin-bottom: 8px !important;
+    }
+
+    .pdf-export h2 {
+      font-size: 12px !important;
+      margin-bottom: 4px !important;
+    }
+
+    .pdf-export .job,
+    .pdf-export .project {
+      margin: 4px 0 6px !important;
+    }
+
+    .pdf-export li {
+      margin: 1px 0 !important;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="toolbar" aria-label="CV controls">
+    <button class="primary" id="download">↓ <span data-i18n="download">Download PDF</span></button>
+    <button class="secondary" id="lang" aria-label="Change language">ES · Español</button>
+  </nav>
+  <main class="sheet" id="cv">
+    <header>
+      <h1>JAIME ENRIQUE GALINDO VILLEGAS</h1>
+      <div class="contact">Guadalajara, Jal | +52 33-4008-5961 | <a
+          href="mailto:contact@jaimegv.dev">contact@jaimegv.dev</a><br>
+        LinkedIn: <a href="https://linkedin.com/in/jaimegv-dev">linkedin.com/in/jaimegv-dev</a> | GitHub: <a
+          href="https://github.com/JaimeGalindoV">github.com/JaimeGalindoV</a></div>
+    </header>
+    <section>
+      <h2 data-i18n="summary">PROFESSIONAL SUMMARY</h2>
+      <p data-i18n="summaryText">Computer Systems Engineering student at ITESO with strong expertise in Cloud Native
+        Architecture (AWS), Microservices, and Infrastructure as Code (Terraform/CloudFormation). Experienced in
+        building resilient backend services in Java, Python, and Node.js, implementing automated CI/CD pipelines, and
+        leveraging AI-powered developer tools to optimize code quality and delivery speed.</p>
+    </section>
+    <section>
+      <h2 data-i18n="education">EDUCATION</h2>
+      <p><span class="strong" data-i18n="degree">B.S. in Computer Systems Engineering</span> | ITESO, Universidad
+        Jesuita de Guadalajara</p>
+      <p data-i18n="graduation">Expected Graduation: June 2027</p>
+    </section>
+    <section class="skills">
+      <h2 data-i18n="skills">TECHNICAL SKILLS</h2>
+      <p><span class="strong" data-i18n="languagesFrameworks">Languages &amp; Frameworks:</span> Java, Python,
+        JavaScript (Node.js, Express), PHP, SQL, HTML/CSS, RESTful APIs</p>
+      <p><span class="strong" data-i18n="cloud">Cloud &amp; DevOps (AWS):</span> AWS Lambda, ECS, S3, RDS, DynamoDB,
+        VPC, API Gateway, SQS/SNS, Terraform, CloudFormation, Docker, CI/CD (GitHub Actions, AWS CodePipeline)</p>
+      <p><span class="strong" data-i18n="databases">Databases &amp; Tools:</span> PostgreSQL, MySQL, MS SQL Server,
+        DynamoDB, MongoDB, Neo4j, Git/GitHub, Linux (Ubuntu), Bash</p>
+    </section>
+    <section>
+      <h2 data-i18n="experience">WORK &amp; LEADERSHIP EXPERIENCE</h2>
+      <div id="experience-list"></div>
+    </section>
+    <section>
+      <h2 data-i18n="projects">FEATURED PROJECTS</h2>
+      <div id="projects-list"></div>
+    </section>
+    <section>
+      <h2 data-i18n="certs">CERTIFICATIONS &amp; LANGUAGES</h2>
+      <ul id="certifications-list"></ul>
+    </section>
+  </main>
+  <script>
+    const translations = {
+      en: {
+        download: "Download PDF", summary: "PROFESSIONAL SUMMARY",
+        summaryText: "Computer Systems Engineering student at ITESO with strong expertise in Cloud Native Architecture (AWS), Microservices, and Infrastructure as Code (Terraform/CloudFormation). Experienced in building resilient backend services in Java, Python, and Node.js, implementing automated CI/CD pipelines, and leveraging AI-powered developer tools to optimize code quality and delivery speed.",
+        education: "EDUCATION", degree: "B.S. in Computer Systems Engineering", graduation: "Expected Graduation: June 2027",
+        skills: "TECHNICAL SKILLS", languagesFrameworks: "Languages & Frameworks:", cloud: "Cloud & DevOps (AWS):", databases: "Databases & Tools:",
+        experience: "WORK & LEADERSHIP EXPERIENCE",
+        jobs: [
+          { company: "AMECIP (Asociación Mexicana de Ciencias Políticas)", location: "Remote", role: "IT Coordinator & Lead Developer (Part-time) | Dec 2025 – Present", bullets: ["Direct technological infrastructure and web platform operations serving institutional members, conference attendees, and editorial staff nationwide.", "Architect and maintain core backend modules (PHP/MySQL) and REST integrations, ensuring platform availability during high-traffic national conferences.", "Led database optimization and cloud server migration (Open Journal Systems), managing DNS routing, SSL, and automated backup routines to eliminate data loss.", "Designed and executed CI/CD deployment workflows and production release management, reducing feature deployment cycles."] },
+          { company: "ITESO", location: "Guadalajara, Mexico", role: "Development Peer Mentor / Academic Assistant | Jan 2023 – Present", bullets: ["Mentored undergraduate engineering students in Object-Oriented Programming (OOP), data structures, and algorithmic problem solving in Java and Python. Conducted code reviews and debugging workshops."] }
+        ],
+        projects: "FEATURED PROJECTS",
+        projectItems: [
+          { title: "Cloud Video Platform Architecture", tech: "Terraform, AWS (EC2, S3, CloudFront, RDS), ALB", links: [["Front", "https://github.com/JaimeGalindoV/youtube_front"], ["Back", "https://github.com/JaimeGalindoV/youtube_back"], ["IaC", "https://github.com/JaimeGalindoV/youtube_IaC"]], bullets: ["Architected a multi-tier, multi-AZ cloud platform with Terraform (IaC) across modular frontend, backend, and infra repos.", "Configured Auto Scaling EC2 instances behind an ALB and CloudFront CDN for global, low-latency media delivery."] },
+          { title: "Serverless E-Commerce Microservices Platform", tech: "AWS Lambda, DynamoDB, API Gateway, CodePipeline", links: [["GitHub", "https://github.com/saulrazom/ecommerce-orders-service"]], bullets: ['Built an event-driven "Orders" microservice handling synchronous stock validation and transactional state via REST APIs.', "Automated testing and deployment stages via AWS CodePipeline and GitHub Actions to enforce strict CI/CD quality gates."] }
+        ],
+        certs: "CERTIFICATIONS & LANGUAGES",
+        certifications: [
+          ["Neo4j Certified Professional:", "Fundamentals & Cypher Query Language (GraphAcademy, 2025)"],
+          ["Project Management & Agile Methodologies:", "Santander Open Academy (2025)"],
+          ["Languages:", "Spanish (Native), English (B2)"]
+        ]
+      },
+      es: {
+        download: "Descargar PDF", summary: "PERFIL PROFESIONAL",
+        summaryText: "Estudiante de Ingeniería en Sistemas Computacionales en ITESO, con sólidos conocimientos en arquitectura cloud native (AWS), microservicios e infraestructura como código (Terraform/CloudFormation). Experiencia desarrollando servicios backend resilientes con Java, Python y Node.js, implementando pipelines CI/CD automatizados y aprovechando herramientas de desarrollo con IA para optimizar la calidad del código y la velocidad de entrega.",
+        education: "EDUCACIÓN", degree: "Ingeniería en Sistemas Computacionales", graduation: "Graduación esperada: junio de 2027",
+        skills: "HABILIDADES TÉCNICAS", languagesFrameworks: "Lenguajes y frameworks:", cloud: "Cloud y DevOps (AWS):", databases: "Bases de datos y herramientas:",
+        experience: "EXPERIENCIA LABORAL Y LIDERAZGO",
+        jobs: [
+          { company: "AMECIP (Asociación Mexicana de Ciencias Políticas)", location: "Remoto", role: "Coordinador de TI y desarrollador líder (medio tiempo) | dic. 2025 – actual", bullets: ["Dirijo la infraestructura tecnológica y las operaciones de la plataforma web para miembros institucionales, asistentes a congresos y personal editorial de todo el país.", "Diseño y mantengo módulos backend principales (PHP/MySQL) e integraciones REST, garantizando la disponibilidad de la plataforma durante congresos nacionales de alto tráfico.", "Lideré la optimización de bases de datos y la migración de servidores a la nube (Open Journal Systems), gestionando DNS, SSL y respaldos automatizados para evitar la pérdida de datos.", "Diseñé e implementé flujos de despliegue CI/CD y gestión de lanzamientos en producción, reduciendo los ciclos de publicación de funcionalidades."] },
+          { company: "ITESO", location: "Guadalajara, México", role: "Mentor de desarrollo / asistente académico | ene. 2023 – actual", bullets: ["Asesoré a estudiantes de ingeniería en programación orientada a objetos, estructuras de datos y resolución algorítmica de problemas con Java y Python. Realicé revisiones de código y talleres de depuración."] }
+        ],
+        projects: "PROYECTOS DESTACADOS",
+        projectItems: [
+          { title: "Plataforma de video en la nube", tech: "Terraform, AWS (EC2, S3, CloudFront, RDS), ALB", links: [["Front", "https://github.com/JaimeGalindoV/youtube_front"], ["Back", "https://github.com/JaimeGalindoV/youtube_back"], ["IaC", "https://github.com/JaimeGalindoV/youtube_IaC"]], bullets: ["Diseñé una plataforma cloud multinivel y multi-AZ con Terraform (IaC), organizada en repositorios modulares de frontend, backend e infraestructura.", "Configuré instancias EC2 con Auto Scaling detrás de un ALB y una CDN CloudFront para distribuir contenido multimedia globalmente con baja latencia."] },
+          { title: "Plataforma de microservicios e-commerce serverless", tech: "AWS Lambda, DynamoDB, API Gateway, CodePipeline", links: [["GitHub", "https://github.com/saulrazom/ecommerce-orders-service"]], bullets: ['Desarrollé un microservicio de "Pedidos" basado en eventos, con validación síncrona de inventario y estado transaccional mediante APIs REST.', "Automaticé pruebas y despliegues con AWS CodePipeline y GitHub Actions para aplicar controles estrictos de calidad CI/CD."] }
+        ],
+        certs: "CERTIFICACIONES E IDIOMAS",
+        certifications: [
+          ["Profesional certificado en Neo4j:", "Fundamentos y lenguaje de consultas Cypher (GraphAcademy, 2025)"],
+          ["Gestión de proyectos y metodologías ágiles:", "Santander Open Academy (2025)"],
+          ["Idiomas:", "Español (nativo), inglés (B2)"]
+        ]
+      }
+    };
+    let lang = "en";
+    // Increase for larger text; decrease if the PDF spills onto a second page.
+    const PDF_SCALE = 1.2;
+
+    function renderCollections(data) {
+      document.getElementById("experience-list").innerHTML = data.jobs.map(job => `
+        <div class="job">
+          <p class="strong">${job.company} | ${job.location}</p>
+          <p class="meta">${job.role}</p>
+          <ul>${job.bullets.map(bullet => `<li>${bullet}</li>`).join("")}</ul>
+        </div>`).join("");
+
+      document.getElementById("projects-list").innerHTML = data.projectItems.map(project => `
+        <div class="project">
+          <p><span class="strong">${project.title}</span> | <em>${project.tech}</em>
+            ${project.links.map(([label, url]) => `[<a href="${url}">${label}</a>]`).join(" ")}.</p>
+          <ul>${project.bullets.map(bullet => `<li>${bullet}</li>`).join("")}</ul>
+        </div>`).join("");
+
+      document.getElementById("certifications-list").innerHTML = data.certifications
+        .map(([title, description]) => `<li><span class="strong">${title}</span> ${description}</li>`)
+        .join("");
+    }
+
+    function setLang(next) {
+      lang = next;
+      document.documentElement.lang = lang;
+      const data = translations[lang];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const translation = data[el.dataset.i18n];
+        if (translation !== undefined) el.textContent = translation;
+      });
+      renderCollections(data);
+      document.getElementById("lang").textContent = lang === "en" ? "ES · Español" : "EN · English";
+    }
+
+    // The English translation data is the editable source of truth for the initial page.
+    setLang("en");
+    document.getElementById("lang").addEventListener("click", () => setLang(lang === "en" ? "es" : "en"));
+    document.getElementById("download").addEventListener("click", async () => {
+      const btn = document.getElementById("download"); btn.disabled = true;
+      try {
+        if (!window.html2pdf) { window.print(); return }
+        const source = document.getElementById("cv");
+        const el = source.cloneNode(true);
+        el.classList.add("pdf-export");
+        el.removeAttribute("id");
+        const wrapper = document.createElement("div");
+        wrapper.style.cssText = "position:fixed;left:-10000px;top:0;width:816px;height:1056px;background:#fff";
+        wrapper.appendChild(el);
+        document.body.appendChild(wrapper);
+        el.style.setProperty("height", "auto", "important");
+        el.style.setProperty("min-height", "0", "important");
+        el.style.setProperty("overflow", "visible", "important");
+        el.style.setProperty("width", `${816 / PDF_SCALE}px`, "important");
+        el.style.setProperty("transform", `scale(${PDF_SCALE})`, "important");
+        el.style.setProperty("transform-origin", "top left", "important");
+        const opt = {
+          margin: 0,
+          filename: lang === "en" ? "Jaime_Galindo_CV_EN.pdf" : "Jaime_Galindo_CV_ES.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff", scrollY: 0 },
+          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+          pagebreak: { mode: ["css", "legacy"], avoid: [".job", ".project", "section"] }
+        };
+        try {
+          await html2pdf().set(opt).from(el).save();
+        } finally {
+          wrapper.remove();
+        }
+      } catch (e) { window.print() } finally { btn.disabled = false }
+    });
+  </script>
+</body>
+
+</html>
